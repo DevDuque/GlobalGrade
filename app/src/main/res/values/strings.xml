@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">GlobalGrade</string>
+
+    <string name="app_name" translatable="false">GlobalGrade</string>
+
+    <string name="str_course"> Software Development </string>
+
+    <!-- Input & Buttons -->
+    <string name="str_input"> INSERT THE GRADE FOR THE COURSE </string>
+    <string name="str_back_btn"> BACK </string>
+    <string name="str_next_btn"> NEXT </string>
+    <string name="str_exit_btn"> EXIT </string>
+
+    <!-- Pages -->
+    <string name="str_home"> Home Page </string>
+    <string name="str_android"> Android Development </string>
+    <string name="str_ios"> IOS Development </string>
+    <string name="str_database"> Special Topics in DB </string>
+    <string name="str_oop"> Special Topics in OOP </string>
+
+    <!-- Grades -->
+    <string name="str_grade_complete"> Overall Grade: </string>
+    <string name="str_grade_incomplete"> Grade not recorded: </string>
 </resources>

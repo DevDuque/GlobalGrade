@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Light Theme -->
+    <color name="light_backgroundColor"> #D3D4D9 </color>
+    <color name="light_text"> #356173 </color>
+    <color name="light_cardBackground"> #294B59 </color>
+    <color name="light_input"> #447C93 </color>
+
+    <!-- Dark Theme -->
+    <color name="dark_backgroundColor"> #252627 </color>
+    <color name="dark_text"> #4B88A2 </color>
+    <color name="dark_cardBackground"> #447C93 </color>
+    <color name="dark_input"> #86AFC1</color>
+    
 </resources>

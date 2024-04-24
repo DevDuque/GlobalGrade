@@ -1,0 +1,21 @@
+<resources>
+
+    <string name ="str_course"> Desenvolvimento de Sistemas </string>
+
+    <!-- Input & Buttons -->
+    <string name="str_input"> Insira a nota da disciplina </string>
+    <string name="str_back_btn"> VOLTAR </string>
+    <string name="str_next_btn"> AVANÇAR </string>
+    <string name="str_exit_btn"> SAIR </string>
+
+    <!-- Páginas -->
+    <string name="str_home"> Tela Inicial </string>
+    <string name="str_android"> Desenvolvimento Android </string>
+    <string name="str_ios"> Desenvolvimento IOS </string>
+    <string name="str_database"> Tópicos Especiais de BD </string>
+    <string name="str_oop"> Tópicos Especiais de POO </string>
+
+    <!-- Notas -->
+    <string name="str_grade_complete"> Nota total: </string>
+    <string name="str_grade_incomplete"> Nota não registrada: </string>
+</resources>
