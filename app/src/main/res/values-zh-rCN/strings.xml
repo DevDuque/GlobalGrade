@@ -1,0 +1,21 @@
+<resources>
+
+    <string name ="str_course"> 软件开发 </string>
+
+    <!-- Input & Buttons -->
+    <string name="str_input"> 请录入课程成绩 </string>
+    <string name="str_back_btn"> 返回 </string>
+    <string name="str_next_btn"> 下一个 </string>
+    <string name="str_exit_btn"> 退出 </string>
+
+    <!-- Páginas -->
+    <string name="str_home"> 主屏幕 </string>
+    <string name="str_android"> 安卓开发 </string>
+    <string name="str_ios"> IOS开发 </string>
+    <string name="str_database"> 数据库专题 </string>
+    <string name="str_oop"> 面向对象编程特别课题 </string>
+
+    <!-- Notas -->
+    <string name="str_grade_complete"> 总评成绩: 100% </string>
+    <string name="str_grade_incomplete"> 成绩未记录 </string>
+</resources>
