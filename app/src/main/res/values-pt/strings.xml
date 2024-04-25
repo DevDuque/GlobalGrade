@@ -18,4 +18,10 @@
     <!-- Notas -->
     <string name="str_grade_complete"> Nota total: </string>
     <string name="str_grade_incomplete"> Nota não registrada: </string>
+
+    <!-- Módulos -->
+    <string name="str_module_one"> Introdução à Programação </string>
+    <string name="str_module_two"> Programação de Sistemas </string>
+    <string name="str_module_three"> Desenvolvimento de Apps Nativos </string>
+    <string name="str_module_four"> Desenvolvimento de Apps Multiplataforma </string>
 </resources>

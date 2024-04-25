@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+    <attr name="theme_backgroundColor" format="color" />
+    <attr name="theme_text" format="color" />
+    <attr name="theme_cardBackground" format="color" />
+    <attr name="theme_input" format="color" />
+    <attr name="theme_icon_menu" format="reference" />
+
+
+</resources>

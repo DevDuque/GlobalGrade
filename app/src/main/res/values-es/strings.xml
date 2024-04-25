@@ -18,4 +18,10 @@
     <!-- Calificaciones -->
     <string name="str_grade_complete"> Calificación General: </string>
     <string name="str_grade_incomplete"> Calificación no registrada </string>
+
+    <!-- Módulos -->
+    <string name="str_module_one"> Introducción a la Programación </string>
+    <string name="str_module_two"> Programación de Sistemas </string>
+    <string name="str_module_three"> Desarrollo de Aplicaciones Nativas </string>
+    <string name="str_module_four"> Desarrollo de Aplicaciones Multiplataforma </string>
 </resources>

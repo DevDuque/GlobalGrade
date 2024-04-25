@@ -2,20 +2,26 @@
 
     <string name ="str_course"> 软件开发 </string>
 
-    <!-- Input & Buttons -->
+    <!-- 输入与按钮 -->
     <string name="str_input"> 请录入课程成绩 </string>
     <string name="str_back_btn"> 返回 </string>
     <string name="str_next_btn"> 下一个 </string>
     <string name="str_exit_btn"> 退出 </string>
 
-    <!-- Páginas -->
+    <!-- 页面 -->
     <string name="str_home"> 主屏幕 </string>
     <string name="str_android"> 安卓开发 </string>
     <string name="str_ios"> IOS开发 </string>
     <string name="str_database"> 数据库专题 </string>
     <string name="str_oop"> 面向对象编程特别课题 </string>
 
-    <!-- Notas -->
+    <!-- 成绩 -->
     <string name="str_grade_complete"> 总评成绩: 100% </string>
     <string name="str_grade_incomplete"> 成绩未记录 </string>
+
+    <!-- 模块 -->
+    <string name="str_module_one"> 编程入门 </string>
+    <string name="str_module_two"> 系统编程 </string>
+    <string name="str_module_three"> 原生应用开发 </string>
+    <string name="str_module_four"> 跨平台应用开发 </string>
 </resources>

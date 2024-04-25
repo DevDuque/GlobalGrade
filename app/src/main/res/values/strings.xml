@@ -20,4 +20,11 @@
     <!-- Grades -->
     <string name="str_grade_complete"> Overall Grade: </string>
     <string name="str_grade_incomplete"> Grade not recorded: </string>
+
+    <!-- Modules -->
+    <string name="str_module_one"> Introduction to Programming </string>
+    <string name="str_module_two"> Software Programming </string>
+    <string name="str_module_three"> Native Apps Development </string>
+    <string name="str_module_four"> Cross-Platform App Development </string>
+
 </resources>
