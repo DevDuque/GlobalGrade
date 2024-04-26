@@ -7,7 +7,13 @@
     <attr name="theme_text" format="color" />
     <attr name="theme_cardBackground" format="color" />
     <attr name="theme_input" format="color" />
+
+    <!-- Icons -->
     <attr name="theme_icon_menu" format="reference" />
+    <attr name="theme_icon_check" format="reference" />
+    <attr name="theme_icon_fail" format="reference" />
+    <attr name="theme_icon_help" format="reference" />
+    <attr name="theme_icon_exit" format="reference" />
 
 
 </resources>

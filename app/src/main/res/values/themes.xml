@@ -6,7 +6,12 @@
         <item name="theme_cardBackground"> @color/light_cardBackground </item>
         <item name="theme_input"> @color/light_input </item>
 
+        <!-- Icons -->
         <item name="theme_icon_menu"> @drawable/light_icon_menu </item>
+        <item name="theme_icon_check"> @drawable/light_icon_check </item>
+        <item name="theme_icon_fail"> @drawable/light_icon_fail </item>
+        <item name="theme_icon_help"> @drawable/light_icon_help </item>
+        <item name="theme_icon_exit"> @drawable/light_icon_exit </item>
     </style>
 
     <!-- Dark Theme -->
@@ -17,5 +22,9 @@
         <item name="theme_input"> @color/dark_input </item>
 
         <item name="theme_icon_menu"> @drawable/dark_icon_menu </item>
+        <item name="theme_icon_check"> @drawable/dark_icon_check </item>
+        <item name="theme_icon_fail"> @drawable/dark_icon_fail </item>
+        <item name="theme_icon_help"> @drawable/dark_icon_help </item>
+        <item name="theme_icon_exit"> @drawable/dark_icon_exit </item>
     </style>
 </resources>
