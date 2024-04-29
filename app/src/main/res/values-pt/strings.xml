@@ -17,7 +17,7 @@
 
     <!-- Notas -->
     <string name="str_grade_complete"> Nota total: </string>
-    <string name="str_grade_incomplete"> Nota não registrada: </string>
+    <string name="str_grade_incomplete"> Nota não registrada </string>
 
     <!-- Módulos -->
     <string name="str_module_one"> Introdução à Programação </string>

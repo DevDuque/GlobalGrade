@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -28,28 +29,32 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Populate the card layout
-        populateCardLayout(getString(R.string.str_android), 80, R.drawable.light_icon_help);
+        // Populate the card layout for each card
+        populateCardLayout(findViewById(R.id.card_one), getString(R.string.str_android), getString(R.string.str_grade_incomplete));
+        populateCardLayout(findViewById(R.id.card_two), getString(R.string.str_ios), getString(R.string.str_grade_incomplete));
+        populateCardLayout(findViewById(R.id.card_three), getString(R.string.str_database), getString(R.string.str_grade_incomplete));
+        populateCardLayout(findViewById(R.id.card_four), getString(R.string.str_oop), getString(R.string.str_grade_incomplete));
     }
 
-    private void populateCardLayout(String title, double grade, int image) {
-        CourseClass course1 = new CourseClass(title, grade, image);
+    private void populateCardLayout(CardView card, String title, String grade) {
+        boolean approved = false; // Default is not approved
+
+        CourseClass course1 = new CourseClass(title, grade, approved);
 
         // Get references to views in the included layout
-        TextView courseTitleTextView = findViewById(R.id.course_title);
-        TextView courseGradeTextView = findViewById(R.id.course_grade);
-        ImageView courseImageView = findViewById(R.id.course_image);
+        TextView courseTitleTextView = card.findViewById(R.id.course_title);
+        TextView courseGradeTextView = card.findViewById(R.id.course_grade);
+        ImageView courseImageView = card.findViewById(R.id.course_image);
 
         // Get data for the course to replace it
         String courseTitle = course1.getTitle();
-        String courseGrade = String.valueOf(course1.getGrade());
-        int courseImageId = course1.getImageResource();
-
-        if (course1.getGrade() >= 60.0) {
-            courseImageId = R.drawable.light_icon_check;
+        String courseGrade;
+        if (approved) {
+            courseGrade = getString(R.string.str_grade_complete) + " " + Double.parseDouble(grade); // Grade Complete
         } else {
-            courseImageId = R.drawable.light_icon_fail;
+            courseGrade = getString(R.string.str_grade_incomplete); // Grade Incomplete
         }
+        int courseImageId = R.drawable.light_icon_help;
 
         // Set the data to the views
         courseTitleTextView.setText(courseTitle);

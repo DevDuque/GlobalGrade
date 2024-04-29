@@ -16,7 +16,7 @@
     <string name="str_oop"> 面向对象编程特别课题 </string>
 
     <!-- 成绩 -->
-    <string name="str_grade_complete"> 总评成绩: 100% </string>
+    <string name="str_grade_complete"> 总评成绩: </string>
     <string name="str_grade_incomplete"> 成绩未记录 </string>
 
     <!-- 模块 -->

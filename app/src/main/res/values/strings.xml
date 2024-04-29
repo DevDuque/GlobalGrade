@@ -19,7 +19,7 @@
 
     <!-- Grades -->
     <string name="str_grade_complete"> Overall Grade: </string>
-    <string name="str_grade_incomplete"> Grade not recorded: </string>
+    <string name="str_grade_incomplete"> Grade not recorded </string>
 
     <!-- Modules -->
     <string name="str_module_one"> Introduction to Programming </string>

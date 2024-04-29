@@ -2,24 +2,24 @@ package com.example.globalgrade.classes;
 
 public class CourseClass {
     private String title;
-    private double grade;
-    private int image;
+    private String grade;
+    private boolean approved;
 
-    public CourseClass(String title, double grade, int image) {
+    public CourseClass(String title, String grade, boolean approved) {
         this.title = title;
         this.grade = grade;
-        this.image = image;
+        this.approved = approved;
     }
 
     public String getTitle() {
         return title;
     }
 
-    public double getGrade() {
+    public String getGrade() {
         return grade;
     }
 
-    public int getImageResource() {
-        return image;
+    public boolean getApproved() {
+        return approved;
     }
 }
