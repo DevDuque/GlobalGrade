@@ -24,4 +24,12 @@
     <string name="str_module_two"> Programación de Sistemas </string>
     <string name="str_module_three"> Desarrollo de Aplicaciones Nativas </string>
     <string name="str_module_four"> Desarrollo de Aplicaciones Multiplataforma </string>
+
+    <!-- Opción de módulos -->
+    <string-array name="course_options">
+        <item>Módulo 1</item>
+        <item>Módulo 2</item>
+        <item>Módulo 3</item>
+        <item>Módulo 4</item>
+    </string-array>
 </resources>

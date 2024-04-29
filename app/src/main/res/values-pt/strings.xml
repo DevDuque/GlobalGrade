@@ -24,4 +24,12 @@
     <string name="str_module_two"> Programação de Sistemas </string>
     <string name="str_module_three"> Desenvolvimento de Apps Nativos </string>
     <string name="str_module_four"> Desenvolvimento de Apps Multiplataforma </string>
+
+    <!-- Opção de módulos -->
+    <string-array name="course_options">
+        <item>Módulo 1</item>
+        <item>Módulo 2</item>
+        <item>Módulo 3</item>
+        <item>Módulo 4</item>
+    </string-array>
 </resources>

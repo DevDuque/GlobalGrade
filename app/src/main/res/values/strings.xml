@@ -27,4 +27,13 @@
     <string name="str_module_three"> Native Apps Development </string>
     <string name="str_module_four"> Cross-Platform App Development </string>
 
+    <!-- Spinner Options (Modules)-->
+    <string-array name="course_options">
+        <item>Module 1</item>
+        <item>Module 2</item>
+        <item>Module 3</item>
+        <item>Module 4</item>
+    </string-array>
+
+
 </resources>
