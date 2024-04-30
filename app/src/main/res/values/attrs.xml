@@ -5,7 +5,7 @@
 
     <attr name="theme_backgroundColor" format="color" />
     <attr name="theme_text" format="color" />
-    <attr name="theme_cardBackground" format="color" />
+    <attr name="theme_cardBackground" format="reference" />
     <attr name="theme_input" format="color" />
 
     <!-- Icons -->

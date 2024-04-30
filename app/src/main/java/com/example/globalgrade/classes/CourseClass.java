@@ -1,14 +1,14 @@
 package com.example.globalgrade.classes;
 
 public class CourseClass {
+
     private String title;
     private String grade;
     private boolean approved;
 
-    public CourseClass(String title, String grade, boolean approved) {
+    public CourseClass(String title, String grade) {
         this.title = title;
         this.grade = grade;
-        this.approved = approved;
     }
 
     public String getTitle() {
@@ -21,5 +21,17 @@ public class CourseClass {
 
     public boolean getApproved() {
         return approved;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setGrade(String grade) {
+        this.grade = grade;
+    }
+
+    public void setApproved(boolean approved) {
+        this.approved = approved;
     }
 }

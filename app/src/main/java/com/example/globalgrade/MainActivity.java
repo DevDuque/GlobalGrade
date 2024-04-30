@@ -1,18 +1,22 @@
 package com.example.globalgrade;
 
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
+
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.globalgrade.classes.CardAdapter;
 import com.example.globalgrade.classes.CourseClass;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,37 +33,25 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Populate the card layout for each card
-        populateCardLayout(findViewById(R.id.card_one), getString(R.string.str_android), getString(R.string.str_grade_incomplete));
-        populateCardLayout(findViewById(R.id.card_two), getString(R.string.str_ios), getString(R.string.str_grade_incomplete));
-        populateCardLayout(findViewById(R.id.card_three), getString(R.string.str_database), getString(R.string.str_grade_incomplete));
-        populateCardLayout(findViewById(R.id.card_four), getString(R.string.str_oop), getString(R.string.str_grade_incomplete));
+        // Find the RecyclerView by its ID
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
+
+        String android = String.valueOf(R.string.str_android);
+
+        // Create a list of CourseClass objects
+        List<CourseClass> courseList = new ArrayList<>();
+        courseList.add(new CourseClass(getString(R.string.str_android), getString(R.string.str_grade_incomplete)));
+        courseList.add(new CourseClass(getString(R.string.str_ios), getString(R.string.str_grade_incomplete)));
+        courseList.add(new CourseClass(getString(R.string.str_database), getString(R.string.str_grade_incomplete)));
+        courseList.add(new CourseClass(getString(R.string.str_oop), getString(R.string.str_grade_incomplete)));
+
+        // Create an instance of CardAdapter and pass the list of CourseClass objects to it
+        CardAdapter adapter = new CardAdapter(courseList);
+
+        // Set the adapter on your RecyclerView
+        recyclerView.setAdapter(adapter);
+
+        // Set a layout manager on your RecyclerView (e.g., LinearLayoutManager)
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
-
-    private void populateCardLayout(CardView card, String title, String grade) {
-        boolean approved = false; // Default is not approved
-
-        CourseClass course1 = new CourseClass(title, grade, approved);
-
-        // Get references to views in the included layout
-        TextView courseTitleTextView = card.findViewById(R.id.course_title);
-        TextView courseGradeTextView = card.findViewById(R.id.course_grade);
-        ImageView courseImageView = card.findViewById(R.id.course_image);
-
-        // Get data for the course to replace it
-        String courseTitle = course1.getTitle();
-        String courseGrade;
-        if (approved) {
-            courseGrade = getString(R.string.str_grade_complete) + " " + Double.parseDouble(grade); // Grade Complete
-        } else {
-            courseGrade = getString(R.string.str_grade_incomplete); // Grade Incomplete
-        }
-        int courseImageId = R.drawable.light_icon_help;
-
-        // Set the data to the views
-        courseTitleTextView.setText(courseTitle);
-        courseGradeTextView.setText(courseGrade);
-        courseImageView.setImageResource(courseImageId);
-    }
-
 }
