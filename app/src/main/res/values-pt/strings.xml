@@ -1,6 +1,7 @@
 <resources>
 
     <string name ="str_course"> Desenvolvimento de Sistemas </string>
+    <string name="str_home"> Tela Inicial </string>
 
     <!-- Input & Buttons -->
     <string name="str_input"> Insira a nota da disciplina </string>
@@ -8,12 +9,29 @@
     <string name="str_next_btn"> AVANÇAR </string>
     <string name="str_exit_btn"> SAIR </string>
 
-    <!-- Páginas -->
-    <string name="str_home"> Tela Inicial </string>
+    <!-- Páginas - Módulo 1 -->
+    <string name="str_computers"> Fundamentos da Computação </string>
+    <string name="str_mobile"> Introdução a Programação Móvel </string>
+    <string name="str_programming"> Introdução a Programação </string>
+    <string name="str_programmingLab"> Laboratório de Programação </string>
+
+    <!-- Páginas - Módulo 2 -->
+    <string name="str_oop"> Programação Orientada a Objetos </string>
+    <string name="str_database"> Introdução a Banco de Dados </string>
+    <string name="str_ads"> Algoritmos e Estruturas de Dados </string>
+    <string name="str_devLab"> Laboratório de Desenvolvimento </string>
+
+    <!-- Páginas - Módulo 3 -->
     <string name="str_android"> Desenvolvimento Android </string>
     <string name="str_ios"> Desenvolvimento IOS </string>
-    <string name="str_database"> Tópicos Especiais de BD </string>
-    <string name="str_oop"> Tópicos Especiais de POO </string>
+    <string name="str_specialDatabase"> Tópicos Especiais de BD </string>
+    <string name="str_specialOop"> Tópicos Especiais de POO </string>
+
+    <!-- Páginas - Módulo 4 -->
+    <string name="str_specialAndroid">Tópicos Especiais em Android</string>
+    <string name="str_specialIOS">Tópicos Especiais em IOS</string>
+    <string name="str_multiplatform">Desenvolvimento Multiplataforma</string>
+    <string name="str_profissional">Empreendedorismo e Orientação Profissional</string>
 
     <!-- Notas -->
     <string name="str_grade_complete"> Nota total: </string>

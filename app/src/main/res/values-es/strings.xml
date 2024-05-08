@@ -1,6 +1,7 @@
 <resources>
 
     <string name ="str_course"> Desarrollo de Sistemas </string>
+    <string name="str_home"> Pantalla de inicio </string>
 
     <!-- Input & Buttons -->
     <string name="str_input"> Inserta la calificación para el curso </string>
@@ -8,12 +9,29 @@
     <string name="str_next_btn"> SIGUIENTE </string>
     <string name="str_exit_btn"> SALIR </string>
 
-    <!-- Páginas -->
-    <string name="str_home"> Pantalla de inicio </string>
+    <!-- Pages - Módulo 1 -->
+    <string name="str_computers"> Fundamentos de Computación </string>
+    <string name="str_mobile"> Introducción al Desarrollo de Aplicaciones Móviles </string>
+    <string name="str_programming"> Introducción a la Programación </string>
+    <string name="str_programmingLab"> Laboratorio de Programación </string>
+
+    <!-- Pages - Módulo 2 -->
+    <string name="str_oop"> Programación Orientada a Objetos </string>
+    <string name="str_database"> Introducción a Bases de Datos </string>
+    <string name="str_ads"> Algoritmos y Estructuras de Datos </string>
+    <string name="str_devLab"> Laboratorio de Desarrollo </string>
+
+    <!-- Páginas - Módulo 3 -->
     <string name="str_android"> Desarrollo de Android </string>
-    <string name="str_ios"> Desarrollo de IOS </string>
-    <string name="str_database"> Temas Especiales en BD </string>
-    <string name="str_oop"> Temas Especiales en POO </string>
+    <string name="str_ios"> Desarrollo de iOS </string>
+    <string name="str_specialDatabase"> Temas Especiales en Bases de Datos </string>
+    <string name="str_specialOop"> Temas Especiales en POO </string>
+
+    <!-- Pages - Módulo 4 -->
+    <string name="str_specialAndroid">Temas Especiales en Android</string>
+    <string name="str_specialIOS">Temas Especiales en iOS</string>
+    <string name="str_multiplatform">Desarrollo Multiplataforma</string>
+    <string name="str_profissional">Emprendimiento y Orientación Profesional</string>
 
     <!-- Calificaciones -->
     <string name="str_grade_complete"> Calificación General: </string>

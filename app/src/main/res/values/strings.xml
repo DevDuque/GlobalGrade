@@ -1,21 +1,38 @@
 <resources>
 
     <string name="app_name" translatable="false">GlobalGrade</string>
-
     <string name="str_course"> Software Development </string>
+    <string name="str_home"> Home Page </string>
 
     <!-- Input & Buttons -->
-    <string name="str_input"> INSERT THE GRADE FOR THE COURSE </string>
+    <string name="str_input"> INSERT THE GRADE FOR THIS CLASS </string>
     <string name="str_back_btn"> BACK </string>
     <string name="str_next_btn"> NEXT </string>
     <string name="str_exit_btn"> EXIT </string>
 
-    <!-- Pages -->
-    <string name="str_home"> Home Page </string>
+    <!-- Pages - Module 1 -->
+    <string name="str_computers"> Computer Fundamentals </string>
+    <string name="str_mobile"> Introduction to Mobile Programming </string>
+    <string name="str_programming">Introduction to Programming</string>
+    <string name="str_programmingLab"> Programming Laboratory </string>
+
+    <!-- Pages - Module 2 -->
+    <string name="str_oop"> Oriented Object Programming </string>
+    <string name="str_database"> Introduction to Database </string>
+    <string name="str_ads"> Algorithms and Data Structures </string>
+    <string name="str_devLab"> Development Laboratory </string>
+
+    <!-- Pages - Module 3 -->
     <string name="str_android"> Android Development </string>
     <string name="str_ios"> IOS Development </string>
-    <string name="str_database"> Special Topics in DB </string>
-    <string name="str_oop"> Special Topics in OOP </string>
+    <string name="str_specialDatabase"> Special Topics in DB </string>
+    <string name="str_specialOop"> Special Topics in OOP </string>
+
+    <!-- Pages - Module 4 -->
+    <string name="str_specialAndroid"> Special Topics in Android</string>
+    <string name="str_specialIOS"> Special Topics in IOS</string>
+    <string name="str_multiplatform">Multiplataform Development</string>
+    <string name="str_profissional"> Entrepreneurship and Professional Guidance </string>
 
     <!-- Grades -->
     <string name="str_grade_complete"> Overall Grade: </string>
