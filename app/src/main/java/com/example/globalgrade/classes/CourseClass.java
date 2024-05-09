@@ -3,10 +3,10 @@ package com.example.globalgrade.classes;
 public class CourseClass {
 
     private String title;
-    private String grade;
+    private Double grade;
     private boolean approved;
 
-    public CourseClass(String title, String grade) {
+    public CourseClass(String title, Double grade) {
         this.title = title;
         this.grade = grade;
     }
@@ -15,23 +15,20 @@ public class CourseClass {
         return title;
     }
 
-    public String getGrade() {
+    public Double getGrade() {
         return grade;
     }
 
     public boolean getApproved() {
-        return approved;
+        return grade >= 60;
     }
 
     public void setTitle(String title) {
         this.title = title;
     }
 
-    public void setGrade(String grade) {
+    public void setGrade(Double grade) {
         this.grade = grade;
     }
 
-    public void setApproved(boolean approved) {
-        this.approved = approved;
-    }
 }
