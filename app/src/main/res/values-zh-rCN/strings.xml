@@ -10,16 +10,16 @@
     <string name="str_exit_btn"> 退出 </string>
 
     <!-- 页面 - 第一模块 -->
-    <string name="str_computers"> Computer Fundamentals </string>
-    <string name="str_mobile"> Introduction to Mobile App Development </string>
-    <string name="str_programming"> Introduction to Programming </string>
-    <string name="str_programmingLab"> Programming Laboratory </string>
+    <string name="str_computers"> 计算机基础 </string>
+    <string name="str_mobile"> 移动应用开发简介 </string>
+    <string name="str_programming"> 编程入门 </string>
+    <string name="str_programmingLab"> 编程实验室 </string>
 
     <!-- 页面 - 第二模块 -->
-    <string name="str_oop"> Oriented Object Programming </string>
-    <string name="str_database"> Introduction to Database </string>
-    <string name="str_ads"> Algorithms and Data Structures </string>
-    <string name="str_devLab"> Development Laboratory </string>
+    <string name="str_oop"> 面向对象编程 </string>
+    <string name="str_database"> 数据库简介 </string>
+    <string name="str_ads"> 算法与数据结构 </string>
+    <string name="str_devLab"> 开发实验室 </string>
 
     <!-- 页面 - 第三模块 -->
     <string name="str_android"> 安卓开发 </string>
