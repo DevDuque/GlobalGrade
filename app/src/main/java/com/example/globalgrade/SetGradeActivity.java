@@ -14,8 +14,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class SetGradeActivity extends AppCompatActivity {
-    EditText inputGradeEditText = findViewById(R.id.input_grade);
-    Button confirmButton = findViewById(R.id.btn_confirm);
+    EditText inputGradeEditText;
+    Button confirmButton;
+    TextView moduleName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,10 @@ public class SetGradeActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Initialize views
+        inputGradeEditText = findViewById(R.id.input_grade);
+        confirmButton = findViewById(R.id.btn_confirm);
 
         // Extract data from the intent
         Intent intent = getIntent();
@@ -40,24 +45,52 @@ public class SetGradeActivity extends AppCompatActivity {
 
             TextView moduleTextView = findViewById(R.id.course_module);
             moduleTextView.setText(courseModule);
+
+            TextView moduleTitleTextView = findViewById(R.id.module_title);
+
+            // Set module title based on selected module
+            String moduleTitle = getModuleTitle(courseModule);
+            moduleTitleTextView.setText(moduleTitle);
         }
 
         // Handle input grade and send it back to MainActivity
+        confirmButton.setOnClickListener(v -> {
+            // Get the input grade
+            String grade = inputGradeEditText.getText().toString().trim();
 
-        confirmButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Get the input grade
-                String grade = inputGradeEditText.getText().toString().trim();
+            // Create an intent to send back the grade to MainActivity
+            Intent resultIntent = new Intent();
+            resultIntent.putExtra("grade", grade);
 
-                // Create an intent to send back the grade to MainActivity
-                Intent resultIntent = new Intent();
-                resultIntent.putExtra("grade", grade);
-
-                // Set the result and finish the activity
-                setResult(RESULT_OK, resultIntent);
-                finish();
-            }
+            // Set the result and finish the activity
+            setResult(RESULT_OK, resultIntent);
+            finish();
         });
+    }
+
+    private String getModuleTitle(String courseModule) {
+        switch (courseModule) {
+            case "Module 1":
+            case "Módulo 1":
+            case "第一模块":
+                return getString(R.string.str_module_one);
+
+            case "Module 2":
+            case "Módulo 2":
+            case "第二模块":
+                return getString(R.string.str_module_two);
+
+            case "Module 3":
+            case "Módulo 3":
+            case "第三模块":
+                return getString(R.string.str_module_three);
+
+            case "Module 4":
+            case "Módulo 4":
+            case "第四模块":
+                return getString(R.string.str_module_four);
+            default:
+                return "Algo deu errado!";
+        }
     }
 }

@@ -10,6 +10,12 @@
     <string name="str_next_btn"> NEXT </string>
     <string name="str_exit_btn"> EXIT </string>
 
+    <!-- Modules -->
+    <string name="str_module_one"> Introduction to Programming </string>
+    <string name="str_module_two"> Software Programming </string>
+    <string name="str_module_three"> Native Apps Development </string>
+    <string name="str_module_four"> Cross-Platform App Development </string>
+
     <!-- Pages - Module 1 -->
     <string name="str_computers"> Computer Fundamentals </string>
     <string name="str_mobile"> Introduction to Mobile Programming </string>
@@ -37,12 +43,6 @@
     <!-- Grades -->
     <string name="str_grade_complete"> Overall Grade: </string>
     <string name="str_grade_incomplete"> Grade not recorded </string>
-
-    <!-- Modules -->
-    <string name="str_module_one"> Introduction to Programming </string>
-    <string name="str_module_two"> Software Programming </string>
-    <string name="str_module_three"> Native Apps Development </string>
-    <string name="str_module_four"> Cross-Platform App Development </string>
 
     <!-- Spinner Options (Modules)-->
     <string-array name="course_options">

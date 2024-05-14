@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent nextPage = new Intent(MainActivity.this, SetGradeActivity.class);
                 nextPage.putExtra("course_name", course.getTitle());
                 nextPage.putExtra("course_module", selectedModule);
-                startActivity(nextPage);
+                startActivityForResult(nextPage, 1);
             }
         };
     }
@@ -93,6 +93,31 @@ public class MainActivity extends AppCompatActivity {
                 // Do nothing
             }
         });
+    }
+
+    // Override onActivityResult() to receive updated grade
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1) {
+            if (resultCode == RESULT_OK && data != null) {
+                double updatedGrade = data.getDoubleExtra("grade", 0.0); // Default value is 0.0
+                String courseTitle = data.getStringExtra("course_name");
+                // Update the corresponding CourseClass object with the updated grade
+                updateCourseGrade(courseTitle, updatedGrade);
+            }
+        }
+    }
+
+    // Method to update the grade of the corresponding CourseClass object
+    private void updateCourseGrade(String courseTitle, double grade) {
+        for (CourseClass course : courseList) {
+            if (course.getTitle().equals(courseTitle)) {
+                course.setGrade(grade); // Set the updated grade
+                break;
+            }
+        }
+        adapter.notifyDataSetChanged(); // Notify adapter of data change
     }
 
     public void InitRecycleView() {
