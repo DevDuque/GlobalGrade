@@ -9,21 +9,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.globalgrade.R;
-import com.example.globalgrade.classes.CourseClass;
 import java.util.List;
 
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> {
 
     private List<CourseClass> courseClassesList;
     private Context context;
+    private static View.OnClickListener cardClickListener;
 
-    // Constructor that accepts the context and the list of CourseClass objects
-    public CardAdapter(Context context, List<CourseClass> courseClassesList) {
+    public CardAdapter(Context context, List<CourseClass> courseClassesList, View.OnClickListener cardClickListener) {
         this.context = context;
         this.courseClassesList = courseClassesList;
+        this.cardClickListener = cardClickListener;
     }
 
-    // ViewHolder class
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView courseTitleTextView;
         public TextView courseGradeTextView;
@@ -34,12 +33,14 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
             courseTitleTextView = v.findViewById(R.id.course_title);
             courseGradeTextView = v.findViewById(R.id.course_grade);
             courseImageView = v.findViewById(R.id.course_image);
+
+
+            v.setOnClickListener(cardClickListener);
         }
     }
 
     @Override
     public CardAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        // Create a new view
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_card_clean, parent, false);
         MyViewHolder vh = new MyViewHolder(v);
         return vh;
@@ -52,9 +53,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
 
         int imageResource;
 
-        // Check if the grade was inserted
         if (courseClass.getGrade() != null && courseClass.getGrade() != null) {
-            // Concatenate the complete grade string using the context
             String completeGrade = context.getString(R.string.str_grade_complete) + courseClass.getGrade();
             holder.courseGradeTextView.setText(completeGrade);
             imageResource = courseClass.getApproved() ?
@@ -66,9 +65,11 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
         }
 
         holder.courseImageView.setImageResource(imageResource);
+
+        // Set the tag to hold the position of the item
+        holder.itemView.setTag(position);
     }
 
-    // Method to check if the current theme is light
     private boolean isLightTheme() {
         int currentNightMode = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
         return currentNightMode == Configuration.UI_MODE_NIGHT_NO;
