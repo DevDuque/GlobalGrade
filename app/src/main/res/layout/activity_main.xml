@@ -16,7 +16,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/light_cardBackground">
+        android:background="?attr/theme_cardColor">
+
 
         <!-- Title -->
         <TextView
@@ -60,7 +61,9 @@
             android:text="@string/str_course"
             android:textSize="24sp"
             android:textColor="?attr/theme_text"
-            android:fontFamily="@font/bai_jamjuree" />
+            android:fontFamily="@font/bai_jamjuree"
+
+            android:textAlignment="center"/>
 
         <Spinner android:id="@+id/course_spinner"
             android:layout_width="wrap_content"
@@ -68,7 +71,9 @@
             android:layout_marginTop="12dp"
             android:gravity="center"
             android:entries="@array/course_options"
-            android:paddingBottom="4dp" />
+            android:paddingBottom="4dp"
+
+            />
     </LinearLayout>
 
     <!-- RecyclerView -->

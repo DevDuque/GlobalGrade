@@ -3,8 +3,9 @@
     <style name="Theme.GlobalGrade.Light" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="theme_backgroundColor"> @color/light_backgroundColor </item>
         <item name="theme_text"> @color/light_text </item>
-        <item name="theme_cardBackground"> @color/light_cardBackground </item>
-        <item name="theme_input"> @color/light_input </item>
+        <item name="theme_cardColor"> @color/light_cardBackground </item>
+        <item name="theme_cardBackground"> @drawable/light_card </item>
+        <item name="theme_input"> @drawable/light_input </item>
 
         <!-- Icons -->
         <item name="theme_icon_menu"> @drawable/light_icon_menu </item>
@@ -18,8 +19,9 @@
     <style name="Theme.GlobalGrade.Dark" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="theme_backgroundColor"> @color/dark_backgroundColor </item>
         <item name="theme_text"> @color/dark_text </item>
-        <item name="theme_cardBackground"> @color/dark_cardBackground </item>
-        <item name="theme_input"> @color/dark_input </item>
+        <item name="theme_cardColor"> @color/dark_cardBackground </item>
+        <item name="theme_cardBackground"> @drawable/dark_card </item>
+        <item name="theme_input"> @drawable/dark_input </item>
 
         <item name="theme_icon_menu"> @drawable/dark_icon_menu </item>
         <item name="theme_icon_check"> @drawable/dark_icon_check </item>

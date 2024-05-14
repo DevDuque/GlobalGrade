@@ -83,12 +83,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:background="@drawable/light_input"
+            android:background="?attr/theme_input"
+
             android:textSize="14sp"
-            android:textColor="?attr/theme_backgroundColor"
+            android:textColorHint="?attr/theme_backgroundColor"
             android:fontFamily="@font/bai_jamjuree"
             android:hint="@string/str_input"
             android:inputType="numberDecimal"
+
+            android:padding="20dp"
             />
     </LinearLayout>
 
@@ -112,11 +115,10 @@
             android:layout_marginHorizontal="20dp"
 
             android:text="@string/str_back_btn"
-            android:textSize="18sp"
-            android:textColor="?attr/theme_text"
+            android:textSize="16sp"
+            android:textColor="?attr/theme_backgroundColor"
             android:fontFamily="@font/bai_jamjuree"
-            android:backgroundTint="@color/dark_cardBackground"
-            />
+            android:backgroundTint="?attr/theme_cardColor" />
 
         <Button
             android:id="@+id/btn_confirm"
@@ -126,10 +128,11 @@
             android:layout_marginHorizontal="20dp"
 
             android:text="@string/str_next_btn"
-            android:textSize="18sp"
-            android:textColor="?attr/theme_text"
+            android:textSize="16sp"
+            android:textColor="?attr/theme_backgroundColor"
+
             android:fontFamily="@font/bai_jamjuree"
-            android:backgroundTint="@color/dark_cardBackground"/>
+            android:backgroundTint="?attr/theme_cardColor" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

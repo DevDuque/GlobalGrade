@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingVertical="20dp"
-    android:background="@drawable/theme_rounded_card"
+    android:background="?attr/theme_cardBackground"
     android:layout_marginVertical="20dp"
     >
 
