@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Make instance to next page
-                Intent nextPage = new Intent(getBaseContext(), M3_Android_Grade.class);
+                Intent nextPage = new Intent(getBaseContext(), SetGradeActivity.class);
 
                 // Start the activity of the next page
                 startActivity(nextPage);
