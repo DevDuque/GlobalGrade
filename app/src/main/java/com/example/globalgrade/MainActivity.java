@@ -1,5 +1,6 @@
 package com.example.globalgrade;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private Spinner spinner;
     private CardAdapter adapter;
-    private List<CourseClass> courseList = new ArrayList<>();
+    private final List<CourseClass> courseList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,18 +49,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public View.OnClickListener onCardClicked() {
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int position = recyclerView.getChildAdapterPosition(v);
-                CourseClass course = courseList.get(position);
-                String selectedModule = spinner.getSelectedItem().toString();
+        return v -> {
+            int position = recyclerView.getChildAdapterPosition(v);
+            CourseClass course = courseList.get(position);
+            String selectedModule = spinner.getSelectedItem().toString();
 
-                Intent nextPage = new Intent(MainActivity.this, SetGradeActivity.class);
-                nextPage.putExtra("course_name", course.getTitle());
-                nextPage.putExtra("course_module", selectedModule);
-                startActivityForResult(nextPage, 1);
-            }
+            Intent nextPage = new Intent(MainActivity.this, SetGradeActivity.class);
+            nextPage.putExtra("course_name", course.getTitle());
+            nextPage.putExtra("course_module", selectedModule);
+            startActivityForResult(nextPage, 1);
         };
     }
 
@@ -101,15 +99,23 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {
             if (resultCode == RESULT_OK && data != null) {
-                double updatedGrade = data.getDoubleExtra("grade", 0.0); // Default value is 0.0
+                // Retrieve the grade from the intent
+                double updatedGrade = data.getDoubleExtra("grade", 0.0);
                 String courseTitle = data.getStringExtra("course_name");
+
+                // Check if grade is correctly received
+                System.out.println("Received grade: " + updatedGrade);
+                System.out.println("Received course name: " + courseTitle);
+
                 // Update the corresponding CourseClass object with the updated grade
                 updateCourseGrade(courseTitle, updatedGrade);
             }
         }
     }
 
+
     // Method to update the grade of the corresponding CourseClass object
+    @SuppressLint("NotifyDataSetChanged")
     private void updateCourseGrade(String courseTitle, double grade) {
         for (CourseClass course : courseList) {
             if (course.getTitle().equals(courseTitle)) {
@@ -129,13 +135,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void populateRecyclerViewForChoice1() {
         courseList.clear();
-        courseList.add(new CourseClass(getString(R.string.str_computers), getExistingGrade(getString(R.string.str_computers))));
+        courseList.add(new CourseClass(getString(R.string.str_computers), null));
         courseList.add(new CourseClass(getString(R.string.str_mobile), null));
         courseList.add(new CourseClass(getString(R.string.str_programming), null));
         courseList.add(new CourseClass(getString(R.string.str_programmingLab), null));
         adapter.notifyDataSetChanged();
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private void populateRecyclerViewForChoice2() {
         courseList.clear();
         courseList.add(new CourseClass(getString(R.string.str_oop), null));
@@ -145,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private void populateRecyclerViewForChoice3() {
         courseList.clear();
         courseList.add(new CourseClass(getString(R.string.str_android), null));
@@ -154,6 +162,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private void populateRecyclerViewForChoice4() {
         courseList.clear();
         courseList.add(new CourseClass(getString(R.string.str_specialAndroid), null));

@@ -16,7 +16,6 @@ import androidx.core.view.WindowInsetsCompat;
 public class SetGradeActivity extends AppCompatActivity {
     EditText inputGradeEditText;
     Button confirmButton;
-    TextView moduleName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,14 +55,21 @@ public class SetGradeActivity extends AppCompatActivity {
         // Handle input grade and send it back to MainActivity
         confirmButton.setOnClickListener(v -> {
             // Get the input grade
-            String grade = inputGradeEditText.getText().toString().trim();
+            String gradeString = inputGradeEditText.getText().toString().trim();
+            String courseTitle = intent.getStringExtra("course_name");
+
+            Double grade = Double.parseDouble(gradeString);
 
             // Create an intent to send back the grade to MainActivity
             Intent resultIntent = new Intent();
             resultIntent.putExtra("grade", grade);
+            resultIntent.putExtra("course_name", courseTitle);
+
+            System.out.println("Nota registrada " + grade);
 
             // Set the result and finish the activity
             setResult(RESULT_OK, resultIntent);
+
             finish();
         });
     }
@@ -89,6 +95,7 @@ public class SetGradeActivity extends AppCompatActivity {
             case "Módulo 4":
             case "第四模块":
                 return getString(R.string.str_module_four);
+
             default:
                 return "Algo deu errado!";
         }
