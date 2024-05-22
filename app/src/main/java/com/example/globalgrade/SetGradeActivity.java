@@ -96,7 +96,7 @@ public class SetGradeActivity extends AppCompatActivity {
     }
 
     public void exitApp(View view) {
-        // Finish the current activity to exit the application
+        // Finish the current activity to comeback to the main page
         finish();
     }
 
