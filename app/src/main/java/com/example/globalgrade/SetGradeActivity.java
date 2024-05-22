@@ -2,20 +2,27 @@ package com.example.globalgrade;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
+import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 public class SetGradeActivity extends AppCompatActivity {
     EditText inputGradeEditText;
     Button confirmButton;
+
+    private DrawerLayout drawerLayout;
+    private ImageButton menuToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +79,40 @@ public class SetGradeActivity extends AppCompatActivity {
 
             finish();
         });
+
+        drawerLayout = findViewById(R.id.drawer_layout);
+        menuToggle = findViewById(R.id.menu_toggle);
+
+        menuToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
+                    drawerLayout.closeDrawer(GravityCompat.END);
+                } else {
+                    drawerLayout.openDrawer(GravityCompat.END);
+                }
+            }
+        });
+    }
+
+    public void exitApp(View view) {
+        // Finish the current activity to exit the application
+        finish();
+    }
+
+    // Override onOptionsItemSelected to handle ActionBarDrawerToggle events
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle the ActionBarDrawerToggle
+        if (item.getItemId() == android.R.id.home) {
+            if (drawerLayout.isDrawerOpen(GravityCompat.END)) {
+                drawerLayout.closeDrawer(GravityCompat.END);
+            } else {
+                drawerLayout.openDrawer(GravityCompat.END);
+            }
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     private String getModuleTitle(String courseModule) {

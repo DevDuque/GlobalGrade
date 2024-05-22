@@ -43,6 +43,9 @@
     <string name="str_module_three"> Desenvolvimento de Apps Nativos </string>
     <string name="str_module_four"> Desenvolvimento de Apps Multiplataforma </string>
 
+    <string name="phrase_Start"> A matéria </string>
+    <string name="phrase_End">  já tem uma nota registrada. </string>
+
     <!-- Opção de módulos -->
     <string-array name="course_options">
         <item>Módulo 1</item>

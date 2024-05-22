@@ -43,6 +43,9 @@
     <string name="str_module_three"> 原生应用开发 </string>
     <string name="str_module_four"> 跨平台应用开发 </string>
 
+    <string name="phrase_Start"> 这个科目 </string>
+    <string name="phrase_End">  已经有一个分数了。 </string>
+
     <!-- 模块选项 -->
     <string-array name="course_options">
         <item> 第一模块 </item>

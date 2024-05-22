@@ -44,6 +44,9 @@
     <string name="str_grade_complete"> Overall Grade: </string>
     <string name="str_grade_incomplete"> Grade not recorded </string>
 
+    <string name="phrase_Start">The subject </string>
+    <string name="phrase_End"> already has a grade assigned to it. </string>
+
     <!-- Spinner Options (Modules)-->
     <string-array name="course_options">
         <item>Module 1</item>

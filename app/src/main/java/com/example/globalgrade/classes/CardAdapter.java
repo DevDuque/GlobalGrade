@@ -54,7 +54,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> 
         int imageResource;
 
         if (courseClass.getGrade() != null && courseClass.getGrade() != null) {
-            String completeGrade = context.getString(R.string.str_grade_complete) + courseClass.getGrade();
+            String completeGrade = context.getString(R.string.str_grade_complete) + " " + courseClass.getGrade();
             holder.courseGradeTextView.setText(completeGrade);
             imageResource = courseClass.getApproved() ?
                     (isLightTheme() ? R.drawable.light_icon_check : R.drawable.dark_icon_check) :

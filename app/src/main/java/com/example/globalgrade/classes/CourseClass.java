@@ -6,9 +6,9 @@ public class CourseClass {
     private Double grade;
     private boolean approved;
 
-    public CourseClass(String title, Double grade) {
+    public CourseClass(String title) {
         this.title = title;
-        this.grade = grade;
+        this.grade = null;
     }
 
     public String getTitle() {
@@ -23,9 +23,6 @@ public class CourseClass {
         return grade >= 60;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public void setGrade(Double grade) {
         this.grade = grade;
